@@ -1,0 +1,60 @@
+// Variable storage & calculation section
+
+string studentName = "Sophia Johnson";
+string course1Name = "English 101";
+string course2Name = "Algebra 101";
+string course3Name = "Biology 101";
+string course4Name = "Computer Science I";
+string course5Name = "Psychology 101";
+
+int course1Credit = 3;
+int course2Credit = 3;
+int course3Credit = 4;
+int course4Credit = 4;
+int course5Credit = 3;
+
+int englishGrade = 4;
+int algebraGrade = 3;
+int biologyGrade = 3;
+int compSciGrade = 3;
+int psycholGrade = 4;
+
+// To calculate GPA:
+// First multiply the grade value for a course by the number of credit hours
+
+int englishGradeValue = 4 * course1Credit;
+int algebraGradeValue = 3 * course2Credit;
+int biologyGradeValue = 3 * course3Credit;
+int compSciGradeValue = 3 * course4Credit;
+int psycholGradeValue = 4 * course5Credit;
+
+// Add the results together
+
+decimal totalResult = englishGradeValue + algebraGradeValue + biologyGradeValue + compSciGradeValue + psycholGradeValue;
+
+// Divide the resulting sum by the total number of credit hours
+// First calculate credit hours for each course, then divide (mentioned above)
+
+int englishCreditHours = 3;
+int algebraCreditHours = 3;
+int biologyCreditHours = 4;
+int compSciCreditHours = 4;
+int psycholCreditHours = 3;
+
+int totalSumCreditHours = englishCreditHours + algebraCreditHours + biologyCreditHours + compSciCreditHours + psycholCreditHours;
+
+decimal sophiaJohnsonGPA = totalResult / totalSumCreditHours;
+sophiaJohnsonGPA = Math.Round(sophiaJohnsonGPA, 2);
+
+// Console output section
+
+Console.WriteLine($"Student: {studentName}\n");
+
+Console.WriteLine("\nCourse\t\t\tGrade\tCredit Hours\n");
+Console.WriteLine($"{course1Name}\t\t\t{englishGrade}\t\t{englishCreditHours}");
+Console.WriteLine($"{course2Name}\t\t\t{algebraGrade}\t\t{algebraCreditHours}");
+Console.WriteLine($"{course3Name}\t\t\t{biologyGrade}\t\t{biologyCreditHours}");
+Console.WriteLine($"{course4Name}\t{compSciGrade}\t\t{compSciCreditHours}");
+Console.WriteLine($"{course5Name}\t\t{psycholGrade}\t\t{psycholCreditHours}");
+
+Console.WriteLine($"\nFinal GPA:\t\t\t{sophiaJohnsonGPA}");
