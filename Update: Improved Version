@@ -1,0 +1,58 @@
+// Variable storage section:
+
+string studentName = "Sophia Johnson";
+string course1Name = "English 101";
+string course2Name = "Algebra 101";
+string course3Name = "Biology 101";
+string course4Name = "Computer Science I";
+string course5Name = "Psychology 101";
+
+int course1Credit = 3;
+int course2Credit = 3;
+int course3Credit = 4;
+int course4Credit = 4;
+int course5Credit = 3;
+
+int gradeA = 4;
+int gradeB = 3;
+
+// To calculate GPA:
+// First calculate grades
+
+int course1GradeValue = gradeA * course1Credit;
+int course2GradeValue = gradeB * course2Credit;
+int course3GradeValue = gradeB * course3Credit;
+int course4GradeValue = gradeB * course4Credit;
+int course5GradeValue = gradeA * course5Credit;
+
+int totalGradeValue = 0;
+totalGradeValue += course1GradeValue;
+totalGradeValue += course2GradeValue;
+totalGradeValue += course3GradeValue;
+totalGradeValue += course4GradeValue;
+totalGradeValue += course5GradeValue;
+
+// Then calculate credit hours
+
+int totalCreditHours = 0;
+totalCreditHours += course1Credit;
+totalCreditHours += course2Credit;
+totalCreditHours += course3Credit;
+totalCreditHours += course4Credit;
+totalCreditHours += course5Credit;
+
+decimal finalGPA = totalGradeValue/(decimal)totalCreditHours;
+finalGPA = Math.Round(finalGPA, 2);
+
+// Print to console section:
+
+Console.WriteLine($"Student: {studentName}\n");
+
+Console.WriteLine("Course\t\tGrade\tCredit Hours\n");
+Console.WriteLine($"{course1Name}\t\t\t{gradeA}\t\t{course1Credit}");
+Console.WriteLine($"{course2Name}\t\t\t{gradeB}\t\t{course2Credit}");
+Console.WriteLine($"{course3Name}\t\t\t{gradeB}\t\t{course3Credit}");
+Console.WriteLine($"{course4Name}\t{gradeB}\t\t{course4Credit}");
+Console.WriteLine($"{course5Name}\t\t{gradeA}\t\t{course5Credit}\n");
+
+Console.WriteLine($"Final GPA:\t\t\t{finalGPA}");
